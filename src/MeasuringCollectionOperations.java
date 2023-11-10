@@ -28,8 +28,7 @@ public class MeasuringCollectionOperations {
                 timeAddHashSet, timeAddTreeSet, timeAddSet_HashSet, timeAddSet_TreeSet);
     }
     public void contains() {
-        long timeContainsArrayList = timeContainsArrayList();
-        System.out.println(timeContainsArrayList);
+        long timeContainsArrayList = timeContainsArrayList();        
         long timeContainsLinkedList = timeContainsLinkedList();
         long timeContainsList_ArrayList = timeContainsList_ArrayList();
         long timeContainsList_LinkedList = timeContainsList_LinkedList();
@@ -130,7 +129,7 @@ public class MeasuringCollectionOperations {
     private long timeContainsArrayList() {
         long start = System.nanoTime();
         for (int i = 0; i < 500000; i++)
-            System.out.println(i + " " + arrayList.contains(new TestData()));;
+            arrayList.contains(new TestData());
         long end = System.nanoTime();
         return end - start;
     }
